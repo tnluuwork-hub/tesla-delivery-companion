@@ -1,0 +1,709 @@
+{
+  "version": "1.0.0",
+  "model": "cybertruck",
+  "estimatedDurationMin": 90,
+  "phases": [
+    {
+      "id": "prep",
+      "title": "Before Delivery Prep",
+      "description": "Steps to take before you arrive. The Cybertruck has a unique stainless steel exoskeleton — understand what to look for.",
+      "sections": [
+        {
+          "id": "paperwork",
+          "title": "Paperwork and documentation",
+          "items": [
+            {
+              "id": "prep-vin",
+              "title": "VIN confirmed",
+              "description": "Verify the VIN on the car matches your order confirmation.",
+              "tags": ["admin"],
+              "severityHint": "major"
+            },
+            {
+              "id": "prep-monroney",
+              "title": "Monroney sticker present",
+              "description": "The price sticker should be on the window. Confirm trim level (Foundation Series, Cyberbeast, All-Wheel Drive).",
+              "tags": ["admin"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "prep-registration-docs",
+              "title": "Registration and title documents",
+              "description": "Confirm all required registration and title documents are provided.",
+              "tags": ["admin"],
+              "severityHint": "major"
+            },
+            {
+              "id": "prep-trim-confirmed",
+              "title": "Trim level confirmed",
+              "description": "Confirm the delivered Cybertruck matches your ordered trim: Foundation Series, Cyberbeast, or All-Wheel Drive.",
+              "tags": ["admin"],
+              "severityHint": "major"
+            }
+          ]
+        },
+        {
+          "id": "accessories",
+          "title": "Accessories and charging",
+          "items": [
+            {
+              "id": "prep-mobile-connector",
+              "title": "Mobile Connector included",
+              "description": "Confirm a Mobile Connector is present.",
+              "tags": ["accessories"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "prep-floor-mats",
+              "title": "Floor mats present",
+              "description": "Verify all floor mats are present and correctly fitted.",
+              "tags": ["accessories"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "prep-bed-liner",
+              "title": "Bed liner present (if ordered)",
+              "description": "If a bed liner was ordered, verify it is installed correctly in the vault.",
+              "tags": ["accessories"],
+              "severityHint": "moderate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "locked-exterior",
+      "title": "Locked Exterior",
+      "description": "Inspect the stainless steel exoskeleton and exterior. No paint to check — focus on steel finish, panel alignment, and gaps.",
+      "sections": [
+        {
+          "id": "panel-gaps-fit",
+          "title": "Panel gaps and fit",
+          "items": [
+            {
+              "id": "locked-panel-gaps",
+              "title": "Panel gaps even",
+              "description": "Walk around the vehicle and check all panel gaps are even and consistent. Cybertruck panels should have tight, precise gaps.",
+              "lockedOnly": true,
+              "tags": ["exterior", "body"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "locked-panel-flush",
+              "title": "Panels flush",
+              "description": "Check that all stainless steel panels sit flush with adjacent panels. No panel should protrude or be recessed noticeably.",
+              "lockedOnly": true,
+              "tags": ["exterior", "body"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "locked-frunk-gap",
+              "title": "Clamshell frunk gap even",
+              "description": "The Cybertruck has a large one-piece clamshell frunk hood. Check the gap around the entire perimeter is consistent.",
+              "lockedOnly": true,
+              "tags": ["exterior", "body"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "locked-tonneau-gap",
+              "title": "Tonneau cover gap even",
+              "description": "Check the gap between the tonneau cover and the bed rails is even along the full length.",
+              "lockedOnly": true,
+              "tags": ["exterior", "body"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "locked-headlight-fit",
+              "title": "Front light bar alignment",
+              "description": "Check the full-width front LED light bar for flush fit and even alignment with the body.",
+              "lockedOnly": true,
+              "tags": ["exterior", "alignment"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "locked-taillight-fit",
+              "title": "Rear light bar alignment",
+              "description": "Check the full-width rear LED light bar for flush fit and even alignment with the tailgate.",
+              "lockedOnly": true,
+              "tags": ["exterior", "alignment"],
+              "severityHint": "moderate"
+            }
+          ]
+        },
+        {
+          "id": "steel-finish",
+          "title": "Stainless steel finish",
+          "items": [
+            {
+              "id": "locked-steel-dents",
+              "title": "No dents or dings in steel panels",
+              "description": "Inspect all stainless steel panels for dents or dings. Unlike paint chips, steel dents are difficult to repair. Check at multiple lighting angles.",
+              "lockedOnly": true,
+              "tags": ["exterior", "body"],
+              "severityHint": "major"
+            },
+            {
+              "id": "locked-steel-scratches",
+              "title": "No deep scratches in steel",
+              "description": "Inspect steel panels for deep gouges or scratches. Note: stainless steel naturally shows brushed finish marks — look for damage that goes against or through the grain.",
+              "lockedOnly": true,
+              "tags": ["exterior", "body"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "locked-steel-consistency",
+              "title": "Steel finish consistent",
+              "description": "Verify the brushed stainless steel finish direction is consistent across all panels. Different grain patterns may indicate a replaced panel.",
+              "lockedOnly": true,
+              "tags": ["exterior", "body"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "locked-steel-wrinkles",
+              "title": "No steel panel warping or waves",
+              "description": "Look across the vehicle at a shallow angle under good lighting. Steel panels should be flat with no waves or warping.",
+              "lockedOnly": true,
+              "tags": ["exterior", "body"],
+              "severityHint": "moderate"
+            }
+          ]
+        },
+        {
+          "id": "glass-roof",
+          "title": "Glass and roof",
+          "items": [
+            {
+              "id": "locked-windshield",
+              "title": "Windshield no chips or cracks",
+              "description": "Inspect the entire large windshield for chips, cracks, or stress fractures.",
+              "lockedOnly": true,
+              "tags": ["exterior", "glass"],
+              "severityHint": "major"
+            },
+            {
+              "id": "locked-rear-window",
+              "title": "Rear window intact",
+              "description": "Check the rear windshield for chips or cracks.",
+              "lockedOnly": true,
+              "tags": ["exterior", "glass"],
+              "severityHint": "major"
+            },
+            {
+              "id": "locked-side-windows",
+              "title": "Side windows intact",
+              "description": "Inspect all side windows for chips or cracks.",
+              "lockedOnly": true,
+              "tags": ["exterior", "glass"],
+              "severityHint": "major"
+            }
+          ]
+        },
+        {
+          "id": "trim-badging",
+          "title": "Trim and badging",
+          "items": [
+            {
+              "id": "locked-badging",
+              "title": "Tesla T logo and badging correctly placed",
+              "description": "Check Tesla T logo and any Cybertruck badging is centered, straight, and properly adhered.",
+              "lockedOnly": true,
+              "tags": ["exterior", "trim"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "locked-wiper",
+              "title": "Single wiper arm positioned correctly",
+              "description": "Cybertruck has a single large wiper. Verify it is parked in the correct position and arm is not bent.",
+              "lockedOnly": true,
+              "tags": ["exterior", "trim"],
+              "severityHint": "minor"
+            }
+          ]
+        },
+        {
+          "id": "wheels-tires",
+          "title": "Wheels and tires",
+          "items": [
+            {
+              "id": "locked-wheel-finish",
+              "title": "Wheel finish undamaged",
+              "description": "Inspect all four wheels for curb rash, scratches, or finish damage.",
+              "tags": ["exterior", "wheels"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "locked-tire-condition",
+              "title": "Tires no damage",
+              "description": "Check all four tires for sidewall damage, uneven wear, or embedded objects.",
+              "tags": ["exterior", "tires"],
+              "severityHint": "major"
+            },
+            {
+              "id": "locked-tire-inflation",
+              "title": "Tire pressure correct",
+              "description": "Check that all tires appear correctly inflated. Confirm on dashboard after unlocking.",
+              "tags": ["exterior", "tires"],
+              "severityHint": "minor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unlocked-exterior",
+      "title": "Unlocked Exterior",
+      "description": "Inspect with doors open, frunk, vault, and tailgate accessible.",
+      "sections": [
+        {
+          "id": "doors-seals",
+          "title": "Doors and seals",
+          "items": [
+            {
+              "id": "unlocked-door-operation",
+              "title": "All doors open and close smoothly",
+              "description": "Open and close all four doors. Each should open smoothly and latch firmly without excessive force.",
+              "tags": ["exterior", "doors"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "unlocked-door-seals",
+              "title": "Door seals seated correctly",
+              "description": "Inspect rubber door seals for tears, misalignment, or areas that are not seated correctly.",
+              "tags": ["exterior", "seals"],
+              "severityHint": "moderate"
+            }
+          ]
+        },
+        {
+          "id": "lights-exterior",
+          "title": "Exterior lights",
+          "items": [
+            {
+              "id": "unlocked-headlights-function",
+              "title": "Front light bar fully operational",
+              "description": "Turn on headlights and verify the full-width front light bar operates in low beam, high beam, and DRL modes.",
+              "tags": ["exterior", "lights"],
+              "severityHint": "major"
+            },
+            {
+              "id": "unlocked-taillights-function",
+              "title": "Rear light bar fully operational",
+              "description": "Verify the full-width rear light bar functions for taillights, brake lights, and reverse lights.",
+              "tags": ["exterior", "lights"],
+              "severityHint": "major"
+            },
+            {
+              "id": "unlocked-turn-signals",
+              "title": "Turn signals operational",
+              "description": "Test all four turn signals and the hazard lights.",
+              "tags": ["exterior", "lights"],
+              "severityHint": "major"
+            }
+          ]
+        },
+        {
+          "id": "frunk-area",
+          "title": "Clamshell frunk",
+          "items": [
+            {
+              "id": "unlocked-frunk-operation",
+              "title": "Clamshell frunk opens and closes correctly",
+              "description": "Open and close the large clamshell frunk hood. It should open fully, stay open, and latch securely when closed.",
+              "tags": ["exterior", "frunk"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "unlocked-frunk-interior",
+              "title": "Frunk interior undamaged",
+              "description": "Inspect frunk interior panels and liner for damage. Check the frunk seal.",
+              "tags": ["exterior", "frunk"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "unlocked-frunk-drain",
+              "title": "Frunk drain clear",
+              "description": "Verify frunk drains are clear of debris.",
+              "tags": ["exterior", "frunk"],
+              "severityHint": "minor"
+            }
+          ]
+        },
+        {
+          "id": "vault-bed",
+          "title": "Vault (truck bed)",
+          "items": [
+            {
+              "id": "unlocked-tonneau-operation",
+              "title": "Motorized tonneau cover opens and closes",
+              "description": "Test the powered tonneau cover open and close cycle. It should move smoothly along its full travel and seal completely when closed.",
+              "tags": ["exterior", "vault"],
+              "severityHint": "major"
+            },
+            {
+              "id": "unlocked-tonneau-seal",
+              "title": "Tonneau cover seals correctly",
+              "description": "With the tonneau closed, check the seal along both bed rails and at the front and rear edges.",
+              "tags": ["exterior", "vault", "seals"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "unlocked-tailgate-operation",
+              "title": "Tailgate operates correctly",
+              "description": "Test tailgate opening and closing. Verify it latches securely. Test the powered lower step if equipped.",
+              "tags": ["exterior", "vault"],
+              "severityHint": "major"
+            },
+            {
+              "id": "unlocked-bed-surface",
+              "title": "Bed surface undamaged",
+              "description": "Inspect the steel bed floor and walls for dents, gouges, or damage.",
+              "tags": ["exterior", "vault"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "unlocked-bed-outlets",
+              "title": "240V/120V outlets in vault functional",
+              "description": "Test the 240V and 120V outlets in the truck bed. Verify they power on from the display.",
+              "tags": ["exterior", "vault", "electronics"],
+              "severityHint": "moderate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interior",
+      "title": "Interior and Controls",
+      "description": "Inspect the cabin, seats, trim, and all controls.",
+      "sections": [
+        {
+          "id": "seats-upholstery",
+          "title": "Seats and upholstery",
+          "items": [
+            {
+              "id": "interior-front-seats",
+              "title": "Front seats no damage",
+              "description": "Inspect seat upholstery for cuts, stains, uneven stitching, or loose panels.",
+              "tags": ["interior", "seats"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "interior-rear-seats",
+              "title": "Rear seats no damage",
+              "description": "Inspect rear seat upholstery and fold-flat mechanism.",
+              "tags": ["interior", "seats"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "interior-seat-adjustment",
+              "title": "Seat adjustment works",
+              "description": "Test powered seat adjustment for all positions.",
+              "tags": ["interior", "seats"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "interior-seat-heating",
+              "title": "Seat heating works",
+              "description": "Enable seat heating from the display and verify front seats heat.",
+              "tags": ["interior", "seats", "hvac"],
+              "severityHint": "minor"
+            }
+          ]
+        },
+        {
+          "id": "dashboard-trim",
+          "title": "Dashboard and trim",
+          "items": [
+            {
+              "id": "interior-dashboard-fit",
+              "title": "Dashboard panels fit and flush",
+              "description": "Check dashboard panels for consistent fit, gaps, or misalignment.",
+              "tags": ["interior", "trim"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "interior-door-panels",
+              "title": "Door panels properly fitted",
+              "description": "Check all four door panels for correct fit, no rattles, and no damage.",
+              "tags": ["interior", "trim"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "interior-headliner",
+              "title": "Headliner clean and fitted",
+              "description": "Inspect headliner for stains, sagging, or loose edges.",
+              "tags": ["interior", "trim"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "interior-carpet",
+              "title": "Carpet clean and fitted",
+              "description": "Check carpet for stains, tears, or misalignment.",
+              "tags": ["interior", "trim"],
+              "severityHint": "minor"
+            }
+          ]
+        },
+        {
+          "id": "display-controls",
+          "title": "Display and controls",
+          "items": [
+            {
+              "id": "interior-main-screen",
+              "title": "Main 18.5-inch touchscreen functional",
+              "description": "Power on and verify the large portrait-orientation touchscreen responds accurately to touch across the entire surface.",
+              "tags": ["interior", "electronics"],
+              "severityHint": "major"
+            },
+            {
+              "id": "interior-screen-dead-pixels",
+              "title": "No dead pixels on screen",
+              "description": "Check for dead or stuck pixels across the main display at different brightness levels.",
+              "tags": ["interior", "electronics"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "interior-rear-screen",
+              "title": "Rear passenger screen functional",
+              "description": "Verify the rear display powers on and responds to touch.",
+              "tags": ["interior", "electronics"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "interior-steering-wheel",
+              "title": "Steering wheel controls responsive",
+              "description": "Test scroll wheels and buttons on the steering wheel.",
+              "tags": ["interior", "controls"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "interior-horn",
+              "title": "Horn works",
+              "description": "Test the horn.",
+              "tags": ["interior", "controls"],
+              "severityHint": "major"
+            }
+          ]
+        },
+        {
+          "id": "hvac-audio",
+          "title": "HVAC, audio, and connectivity",
+          "items": [
+            {
+              "id": "interior-hvac",
+              "title": "HVAC heats and cools",
+              "description": "Enable heating and cooling from the display. Verify air comes from correct vents.",
+              "tags": ["interior", "hvac"],
+              "severityHint": "major"
+            },
+            {
+              "id": "interior-audio",
+              "title": "Audio system works",
+              "description": "Play audio through the speakers. Verify all speakers work and listen for buzzing.",
+              "tags": ["interior", "audio"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "interior-wireless-charging",
+              "title": "Wireless charging works",
+              "description": "Place a Qi-compatible phone on the wireless charging pad and verify it charges.",
+              "tags": ["interior", "electronics"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "interior-usb-ports",
+              "title": "USB ports functional",
+              "description": "Test front and rear USB-C ports with a device.",
+              "tags": ["interior", "electronics"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "interior-120v-outlet",
+              "title": "Interior 120V outlet functional",
+              "description": "Test the interior 120V power outlet. Verify it powers on from the display.",
+              "tags": ["interior", "electronics"],
+              "severityHint": "minor"
+            }
+          ]
+        },
+        {
+          "id": "lighting-interior",
+          "title": "Interior lighting",
+          "items": [
+            {
+              "id": "interior-overhead-lights",
+              "title": "Overhead lights work",
+              "description": "Test map lights and dome lights.",
+              "tags": ["interior", "lighting"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "interior-ambient-lights",
+              "title": "Ambient lighting works",
+              "description": "Enable ambient lighting from the display and verify it illuminates correctly.",
+              "tags": ["interior", "lighting"],
+              "severityHint": "minor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cargo-accessories",
+      "title": "Vault, Frunk, and Accessories",
+      "description": "Verify cargo areas, onboard power, and all accessories.",
+      "sections": [
+        {
+          "id": "trunk",
+          "title": "Vault and storage",
+          "items": [
+            {
+              "id": "cargo-vault-floor",
+              "title": "Vault floor undamaged",
+              "description": "Inspect the vault floor and walls for scratches, dents, or damage.",
+              "tags": ["cargo", "vault"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "cargo-vault-seal",
+              "title": "Tonneau seals correctly",
+              "description": "Verify the powered tonneau cover seals the vault completely when closed.",
+              "tags": ["cargo", "vault", "seals"],
+              "severityHint": "moderate"
+            }
+          ]
+        },
+        {
+          "id": "accessories-check",
+          "title": "Accessories and keys",
+          "items": [
+            {
+              "id": "cargo-key-cards",
+              "title": "Two key cards present",
+              "description": "Confirm two NFC key cards are included. Test both on the door pillar.",
+              "tags": ["accessories", "keys"],
+              "severityHint": "major"
+            },
+            {
+              "id": "cargo-phone-key",
+              "title": "Phone key paired",
+              "description": "Set up phone key in the Tesla app and verify it unlocks the vehicle.",
+              "tags": ["accessories", "keys", "electronics"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "cargo-mobile-connector-cable",
+              "title": "Mobile Connector cable intact",
+              "description": "Inspect Mobile Connector cable and adapters for damage.",
+              "tags": ["accessories", "charging"],
+              "severityHint": "moderate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drive-final",
+      "title": "Drive and Final Verification",
+      "description": "Take a short test drive and complete final system checks.",
+      "sections": [
+        {
+          "id": "drive-checks",
+          "title": "Drive checks",
+          "items": [
+            {
+              "id": "drive-acceleration",
+              "title": "Acceleration smooth",
+              "description": "Test acceleration from stop. No shudder, hesitation, or unusual sounds from the drivetrain.",
+              "tags": ["drive", "powertrain"],
+              "severityHint": "major"
+            },
+            {
+              "id": "drive-braking",
+              "title": "Braking smooth",
+              "description": "Test brakes at low speed. No pulling, grinding, or pulsation.",
+              "tags": ["drive", "brakes"],
+              "severityHint": "major"
+            },
+            {
+              "id": "drive-regen",
+              "title": "Regenerative braking works",
+              "description": "Verify regen braking engages on lift-off with expected deceleration.",
+              "tags": ["drive", "powertrain"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "drive-air-suspension",
+              "title": "Air suspension levels correctly",
+              "description": "Test air suspension height adjustments including extract mode. Verify smooth height changes.",
+              "tags": ["drive", "suspension"],
+              "severityHint": "major"
+            },
+            {
+              "id": "drive-steering",
+              "title": "Steering straight with no pull",
+              "description": "Drive straight and verify the truck tracks straight without pulling to one side.",
+              "tags": ["drive", "steering"],
+              "severityHint": "major"
+            },
+            {
+              "id": "drive-vibration",
+              "title": "No unusual vibration",
+              "description": "Listen and feel for unusual vibrations from wheels, suspension, or drivetrain at various speeds.",
+              "tags": ["drive", "suspension"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "drive-noises",
+              "title": "No unusual noises",
+              "description": "Listen for wind noise, rattles, or squeaks. Check for tonneau cover or tailgate rattles at speed.",
+              "tags": ["drive", "suspension"],
+              "severityHint": "minor"
+            }
+          ]
+        },
+        {
+          "id": "tech-systems",
+          "title": "Technology and safety systems",
+          "items": [
+            {
+              "id": "final-autopilot",
+              "title": "Autopilot/FSD enables",
+              "description": "Test Autopilot or FSD engagement on an appropriate road. Verify cameras are clean and unobstructed.",
+              "tags": ["electronics", "safety"],
+              "severityHint": "major"
+            },
+            {
+              "id": "final-cameras",
+              "title": "All cameras functional",
+              "description": "Access the camera view on the display and verify all cameras display correctly.",
+              "tags": ["electronics", "safety"],
+              "severityHint": "major"
+            },
+            {
+              "id": "final-gps",
+              "title": "GPS/Navigation accurate",
+              "description": "Open navigation and verify GPS lock is acquired and location is accurate.",
+              "tags": ["electronics", "navigation"],
+              "severityHint": "moderate"
+            },
+            {
+              "id": "final-ota-updates",
+              "title": "Software up to date",
+              "description": "Check Software settings panel for current version and any pending updates.",
+              "tags": ["electronics", "software"],
+              "severityHint": "minor"
+            },
+            {
+              "id": "final-odometer",
+              "title": "Odometer reading reasonable",
+              "description": "Verify odometer reading is low and consistent with a new delivery (under 50 miles typically).",
+              "tags": ["admin"],
+              "severityHint": "major"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
