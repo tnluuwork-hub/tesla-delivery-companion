@@ -11,13 +11,12 @@ interface SessionStore {
   started: boolean;
 
   // actions
-  startSession: (model: TeslaModel) => void;
-  loadOrCreate: (model: TeslaModel) => void;
+  startSession: (model: TeslaModel, vin: string) => void;
   setItemStatus: (itemId: string, status: ItemStatus) => void;
   setItemNote: (itemId: string, note: string) => void;
   setItemSeverity: (itemId: string, severity: SeverityLevel) => void;
   setItemPhoto: (itemId: string, photo: string) => void;
-  resetSession: (model: TeslaModel) => void;
+  resetSession: () => void;
 }
 
 function touch(session: ChecklistSession): ChecklistSession {
@@ -41,16 +40,9 @@ export const useSessionStore = create<SessionStore>((set, get) => ({
   session: null,
   started: false,
 
-  loadOrCreate(model) {
-    const existing = loadSession(model);
-    if (existing) {
-      set({ session: existing, started: true });
-    }
-  },
-
-  startSession(model) {
-    const existing = loadSession(model);
-    const session = existing ?? createSession(model);
+  startSession(model, vin) {
+    const existing = loadSession(model, vin);
+    const session = existing ?? createSession(model, vin);
     saveSession(session);
     set({ session, started: true });
   },
@@ -79,10 +71,10 @@ export const useSessionStore = create<SessionStore>((set, get) => ({
     set({ session: updateItem(session, itemId, { photo }) });
   },
 
-  resetSession(model) {
-    clearSession(model);
-    const fresh = createSession(model);
-    saveSession(fresh);
-    set({ session: fresh, started: false });
+  resetSession() {
+    const { session } = get();
+    if (!session) return;
+    clearSession(session.model, session.vin);
+    set({ session: null, started: false });
   },
 }));

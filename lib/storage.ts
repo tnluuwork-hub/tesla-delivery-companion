@@ -3,14 +3,14 @@ import type { TeslaModel } from '@/types/checklist';
 
 const KEY_PREFIX = 'tdc_session_';
 
-function key(model: TeslaModel) {
-  return `${KEY_PREFIX}${model}`;
+function key(model: TeslaModel, vin: string) {
+  return `${KEY_PREFIX}${model}_${vin.toUpperCase()}`;
 }
 
-export function loadSession(model: TeslaModel): ChecklistSession | null {
+export function loadSession(model: TeslaModel, vin: string): ChecklistSession | null {
   if (typeof window === 'undefined') return null;
   try {
-    const raw = localStorage.getItem(key(model));
+    const raw = localStorage.getItem(key(model, vin));
     if (!raw) return null;
     return JSON.parse(raw) as ChecklistSession;
   } catch {
@@ -21,20 +21,21 @@ export function loadSession(model: TeslaModel): ChecklistSession | null {
 export function saveSession(session: ChecklistSession): void {
   if (typeof window === 'undefined') return;
   try {
-    localStorage.setItem(key(session.model), JSON.stringify(session));
+    localStorage.setItem(key(session.model, session.vin), JSON.stringify(session));
   } catch {
     // storage unavailable — no-op
   }
 }
 
-export function clearSession(model: TeslaModel): void {
+export function clearSession(model: TeslaModel, vin: string): void {
   if (typeof window === 'undefined') return;
-  localStorage.removeItem(key(model));
+  localStorage.removeItem(key(model, vin));
 }
 
-export function createSession(model: TeslaModel): ChecklistSession {
+export function createSession(model: TeslaModel, vin: string): ChecklistSession {
   return {
     model,
+    vin,
     startedAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     itemStates: {},

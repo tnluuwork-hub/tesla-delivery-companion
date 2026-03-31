@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 import type { ChecklistDocument } from '@/types/checklist';
 import { useSessionStore } from '@/store/session-store';
 import { useActivePhase } from '@/features/progress/hooks/useActivePhase';
@@ -16,13 +16,8 @@ interface Props {
 }
 
 export function DeliveryApp({ doc }: Props) {
-  const { session, started, loadOrCreate, startSession, setItemStatus, setItemNote, setItemSeverity, setItemPhoto, resetSession } =
+  const { session, started, startSession, setItemStatus, setItemNote, setItemSeverity, setItemPhoto, resetSession } =
     useSessionStore();
-
-  // Attempt to restore an existing session on mount
-  useEffect(() => {
-    loadOrCreate(doc.model);
-  }, [doc.model, loadOrCreate]);
 
   const phaseIds = useMemo(() => doc.phases.map((p) => p.id), [doc.phases]);
   const activePhaseId = useActivePhase(phaseIds);
@@ -36,7 +31,7 @@ export function DeliveryApp({ doc }: Props) {
   }
 
   if (!started || !session) {
-    return <StartScreen doc={doc} onStart={() => startSession(doc.model)} />;
+    return <StartScreen doc={doc} onStart={(vin) => startSession(doc.model, vin)} />;
   }
 
   return (
@@ -78,7 +73,7 @@ export function DeliveryApp({ doc }: Props) {
           <button
             onClick={() => {
               if (confirm('Reset inspection? All progress will be lost.')) {
-                resetSession(doc.model);
+                resetSession();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }
             }}

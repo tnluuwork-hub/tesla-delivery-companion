@@ -11,6 +11,7 @@ export interface ItemState {
 
 export interface ChecklistSession {
   model: TeslaModel;
+  vin: string;
   startedAt: string;
   updatedAt: string;
   itemStates: Record<string, ItemState>;
